@@ -124,6 +124,7 @@ rtps:
     msg: RateCtrlStatus
   - id: 58
     msg: RcChannels
+    send: true
   - id: 59
     msg: RcParameterMap
   - id: 60
@@ -341,14 +342,23 @@ rtps:
     msg: AirspeedWind
   - id: 159
     msg: EstimatorEventFlags
-  - id: 160
-    msg: Event
-  - id: 161
-    msg: BaroBiasEstimate
-  - id: 162
-    msg: InternalCombustionEngineStatus
-  - id: 163
-    msg: CameraStatus
+  - id: 174
+    msg: ReferenceTrajectory
+    receive: true
+  - id: 175
+    msg: ReferenceAttitudeThrust
+    receive: true
+  - id: 176
+    msg: ReferenceVirtualRate
+    send: true
+  - id: 177
+    msg: ReferenceTorque
+    send: true
+  - id: 178
+    msg: ParamTranslation
+  - id: 179
+    msg: ParamAttitude
+    send: true
   - alias: ActuatorControls
     id: 180
     msg: ActuatorControls0

@@ -7,20 +7,27 @@ rtps:
     msg: ActuatorOutputs
   - id: 4
     msg: AdcReport
+    send: true
   - id: 5
     msg: Airspeed
+    send: true
   - id: 6
     msg: BatteryStatus
+    send: true
   - id: 7
     msg: CameraCapture
+    receive: true
   - id: 8
     msg: CameraTrigger
+    receive: true
   - id: 9
     msg: CollisionReport
+    receive: true
   - id: 10
     msg: CommanderState
   - id: 11
     msg: Cpuload
+    send: true
   - id: 12
     msg: DebugArray
     receive: true
@@ -37,6 +44,7 @@ rtps:
     msg: DifferentialPressure
   - id: 17
     msg: DistanceSensor
+    send: true
   - id: 18
     msg: EstimatorInnovations
   - id: 19
@@ -44,13 +52,14 @@ rtps:
   - id: 20
     msg: EkfGpsDrift
   - id: 21
-    msg: SensorGps
+    msg: EkfGpsPosition
   - id: 22
     msg: EscReport
   - id: 23
     msg: EscStatus
   - id: 24
     msg: EstimatorStatus
+    send: true
   - id: 25
     msg: FollowTarget
   - id: 26
@@ -61,11 +70,12 @@ rtps:
     msg: GpsInjectData
   - id: 29
     msg: HomePosition
+    send: true
   - id: 30
     msg: InputRc
-    send: true
   - id: 31
     msg: IridiumsbdStatus
+    send: true
   - id: 32
     msg: IrlockReport
   - id: 33
@@ -90,6 +100,7 @@ rtps:
     msg: MultirotorMotorLimits
   - id: 43
     msg: ObstacleDistance
+    receive: true
   - id: 44
     msg: OffboardControlMode
     receive: true
@@ -120,10 +131,12 @@ rtps:
     msg: QshellRetval
   - id: 56
     msg: RadioStatus
+    send: true
   - id: 57
     msg: RateCtrlStatus
   - id: 58
     msg: RcChannels
+    send: true
   - id: 59
     msg: RcParameterMap
   - id: 60
@@ -135,6 +148,7 @@ rtps:
     msg: SensorAccel
   - id: 63
     msg: SensorBaro
+    send: true
   - id: 64
     msg: EstimatorSensorBias
   - id: 65
@@ -147,11 +161,14 @@ rtps:
   - id: 68
     msg: SensorMag
   - id: 69
-    msg: SensorsStatusImu
+    msg: SensorPreflight
   - id: 70
     msg: SensorSelection
+    send: true
   - id: 71
     msg: Px4IoStatus
+  - id: 72
+    msg: SubsystemInfo
   - id: 73
     msg: SystemPower
   - id: 74
@@ -160,7 +177,6 @@ rtps:
     msg: TecsStatus
   - id: 76
     msg: TelemetryStatus
-    receive: true
   - id: 77
     msg: TestMotor
   - id: 78
@@ -169,7 +185,7 @@ rtps:
     send: true
   - id: 79
     msg: TrajectoryWaypoint
-    send: true
+    receive: true
   - id: 80
     msg: TransponderReport
   - id: 81
@@ -198,7 +214,6 @@ rtps:
     msg: VehicleConstraints
   - id: 92
     msg: VehicleControlMode
-    send: true
   - id: 93
     msg: VehicleGlobalPosition
   - id: 94
@@ -210,7 +225,6 @@ rtps:
     send: true
   - id: 97
     msg: VehicleLocalPositionSetpoint
-    receive: true
   - id: 98
     msg: VehicleMagnetometer
   - id: 99
@@ -230,8 +244,10 @@ rtps:
     receive: true
   - id: 105
     msg: VtolVehicleStatus
+    send: true
   - id: 106
-    msg: Wind
+    msg: WindEstimate
+    send: true
   - id: 107
     msg: CollisionConstraints
     send: true
@@ -273,10 +289,8 @@ rtps:
     msg: HoverThrustEstimate
   - id: 126
     msg: TrajectoryBezier
-    receive: true
   - id: 127
     msg: VehicleTrajectoryBezier
-    receive: true
   - id: 128
     msg: TimesyncStatus
   - id: 129
@@ -288,170 +302,101 @@ rtps:
   - id: 132
     msg: YawEstimatorStatus
   - id: 133
-    msg: SensorPreflightMag
-  - id: 134
-    msg: EstimatorStates
-  - id: 135
-    msg: GeneratorStatus
-  - id: 136
-    msg: SensorGyroFft
-  - id: 137
-    msg: NavigatorMissionItem
-  - id: 138
-    msg: EstimatorOpticalFlowVel
-  - id: 139
-    msg: EstimatorSelectorStatus
-  - id: 140
-    msg: ManualControlSwitches
-  - id: 141
-    msg: EstimatorStatusFlags
-  - id: 142
-    msg: RtlFlightTime
-  - id: 143
-    msg: VehicleAngularAccelerationSetpoint
+    msg: TelemetryHeartbeat
   - id: 144
-    msg: VehicleTorqueSetpoint
+    msg: ReferenceTrajectory
+    receive: true
   - id: 145
-    msg: VehicleThrustSetpoint
+    msg: ReferenceAttitudeThrust
+    receive: true
   - id: 146
-    msg: VehicleActuatorSetpoint
+    msg: ReferenceVirtualRate
+    send: true
   - id: 147
-    msg: ControlAllocatorStatus
+    msg: ReferenceTorque
+    send: true
   - id: 148
-    msg: MagWorkerData
+    msg: ParamTranslation
   - id: 149
-    msg: TakeoffStatus
-  - id: 150
-    msg: HeaterStatus
-  - id: 151
-    msg: GimbalDeviceAttitudeStatus
-  - id: 152
-    msg: GimbalDeviceInformation
-  - id: 153
-    msg: GimbalDeviceSetAttitude
-  - id: 154
-    msg: GimbalManagerInformation
-  - id: 155
-    msg: GimbalManagerSetAttitude
-  - id: 156
-    msg: GimbalManagerStatus
-  - id: 157
-    msg: GimbalManagerSetManualControl
-  - id: 158
-    msg: AirspeedWind
-  - id: 159
-    msg: EstimatorEventFlags
-  - id: 160
-    msg: Event
-  - id: 161
-    msg: BaroBiasEstimate
-  - id: 162
-    msg: InternalCombustionEngineStatus
-  - id: 163
-    msg: CameraStatus
+    msg: ParamAttitude
+    send: true
   - alias: ActuatorControls
-    id: 180
+    id: 150
     msg: ActuatorControls0
   - alias: ActuatorControls
-    id: 181
+    id: 151
     msg: ActuatorControls1
   - alias: ActuatorControls
-    id: 182
+    id: 152
     msg: ActuatorControls2
   - alias: ActuatorControls
-    id: 183
+    id: 153
     msg: ActuatorControls3
   - alias: ActuatorControls
-    id: 184
+    id: 154
     msg: ActuatorControlsVirtualFw
   - alias: ActuatorControls
-    id: 185
+    id: 155
     msg: ActuatorControlsVirtualMc
   - alias: VehicleAttitudeSetpoint
-    id: 186
+    id: 156
     msg: McVirtualAttitudeSetpoint
   - alias: VehicleAttitudeSetpoint
-    id: 187
+    id: 157
     msg: FwVirtualAttitudeSetpoint
   - alias: VehicleAttitude
-    id: 188
+    id: 158
     msg: VehicleAttitudeGroundtruth
   - alias: VehicleGlobalPosition
-    id: 189
+    id: 159
     msg: VehicleGlobalPositionGroundtruth
   - alias: VehicleLocalPosition
-    id: 190
+    id: 160
     msg: VehicleLocalPositionGroundtruth
   - alias: VehicleOdometry
-    id: 191
+    id: 161
     msg: VehicleMocapOdometry
     receive: true
   - alias: VehicleOdometry
-    id: 192
+    id: 162
     msg: VehicleVisualOdometry
     receive: true
   - alias: VehicleTrajectoryWaypoint
-    id: 193
+    id: 163
     msg: VehicleTrajectoryWaypointDesired
-    send: true
   - alias: ObstacleDistance
-    id: 194
+    id: 164
     msg: ObstacleDistanceFused
   - alias: VehicleAttitude
-    id: 195
+    id: 165
     msg: VehicleVisionAttitude
   - alias: VehicleLocalPositionSetpoint
-    id: 196
+    id: 166
     msg: TrajectorySetpoint
-    receive: true
   - alias: CameraTrigger
-    id: 197
+    id: 167
     msg: CameraTriggerSecondary
   - alias: VehicleAngularVelocity
-    id: 198
+    id: 168
     msg: VehicleAngularVelocityGroundtruth
   - alias: VehicleOdometry
-    id: 199
-    msg: EstimatorVisualOdometryAligned
+    id: 169
+    msg: VehicleVisualOdometryAligned
   - alias: EstimatorInnovations
-    id: 200
+    id: 170
     msg: EstimatorInnovationVariances
   - alias: EstimatorInnovations
-    id: 201
+    id: 171
     msg: EstimatorInnovationTestRatios
   - alias: OrbTest
-    id: 202
+    id: 172
     msg: OrbMultitest
   - alias: OrbTestMedium
-    id: 203
+    id: 173
     msg: OrbTestMediumMulti
   - alias: OrbTestMedium
-    id: 204
+    id: 174
     msg: OrbTestMediumQueue
   - alias: OrbTestMedium
-    id: 205
+    id: 175
     msg: OrbTestMediumQueuePoll
-  - alias: OrbTestMedium
-    id: 206
-    msg: OrbTestMediumWrapAround
-  - alias: VehicleLocalPosition
-    id: 207
-    msg: EstimatorLocalPosition
-  - alias: VehicleGlobalPosition
-    id: 208
-    msg: EstimatorGlobalPosition
-  - alias: VehicleAttitude
-    id: 209
-    msg: EstimatorAttitude
-  - alias: VehicleOdometry
-    id: 210
-    msg: EstimatorOdometry
-  - alias: ActuatorControls
-    id: 211
-    msg: ActuatorControls4
-  - alias: ActuatorControls
-    id: 212
-    msg: ActuatorControls5
-  - alias: Wind
-    id: 213
-    msg: EstimatorWind

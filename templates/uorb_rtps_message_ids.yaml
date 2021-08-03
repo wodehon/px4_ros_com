@@ -87,7 +87,6 @@ rtps:
     msg: ObstacleDistance
   - id: 44
     msg: OffboardControlMode
-    receive: true
   - id: 45
     msg: OpticalFlow
   - id: 46
@@ -202,7 +201,7 @@ rtps:
     msg: VehicleMagnetometer
   - id: 99
     msg: VehicleOdometry
-    send: true
+    receive: false
   - id: 100
     msg: VehicleRatesSetpoint
   - id: 101

@@ -322,22 +322,24 @@ rtps:
     msg: AirspeedWind
   - id: 159
     msg: EstimatorEventFlags
-  - id: 174
+  - id: 173
     msg: ReferenceTrajectory
-  - id: 175
+  - id: 174
     msg: ReferenceAttitudeThrust
     receive: true
-  - id: 176
+  - id: 175
     msg: ReferenceVirtualRate
     send: true
-  - id: 177
+  - id: 176
     msg: ReferenceTorque
     send: true
-  - id: 178
+  - id: 177
     msg: ParamTranslation
-  - id: 179
+  - id: 178
     msg: ParamAttitude
     send: true
+  - id: 179
+    msg: LogTransError
   - alias: ActuatorControls
     id: 180
     msg: ActuatorControls0

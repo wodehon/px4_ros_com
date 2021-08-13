@@ -324,7 +324,6 @@ rtps:
     msg: EstimatorEventFlags
   - id: 174
     msg: ReferenceTrajectory
-    receive: true
   - id: 175
     msg: ReferenceAttitudeThrust
     receive: true

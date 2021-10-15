@@ -341,14 +341,24 @@ rtps:
     msg: AirspeedWind
   - id: 159
     msg: EstimatorEventFlags
-  - id: 160
-    msg: Event
-  - id: 161
-    msg: EstimatorBaroBias
-  - id: 162
-    msg: InternalCombustionEngineStatus
-  - id: 163
-    msg: CameraStatus
+  - id: 173
+    msg: ReferenceTrajectory
+  - id: 174
+    msg: ReferenceAttitudeThrust
+    receive: true
+  - id: 175
+    msg: ReferenceVirtualRate
+    send: true
+  - id: 176
+    msg: ReferenceTorque
+    send: true
+  - id: 177
+    msg: ParamTranslation
+  - id: 178
+    msg: ParamAttitude
+    send: true
+  - id: 179
+    msg: LogTransError
   - alias: ActuatorControls
     id: 180
     msg: ActuatorControls0

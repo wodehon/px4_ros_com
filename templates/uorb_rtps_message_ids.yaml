@@ -232,6 +232,7 @@ rtps:
     send: true
   - id: 113
     msg: VehicleAcceleration
+    send: true
   - id: 115
     msg: AirspeedValidated
   - id: 116

@@ -199,7 +199,7 @@ else
 fi
 # build px4_ros_com package, except the ros1_bridge
 [ ! -v $verbose ] && colcon_output=$(echo "--event-handlers console_direct+")
-cd $ROS2_WS_DIR && colcon build --packages-skip ros1_bridge $colcon_output
+cd $ROS2_WS_DIR && colcon build --packages-skip ros1_bridge realsense2_camera realsense2_camera_msgs realsense2_description $colcon_output
 
 $SHELL_TERM \
   '''

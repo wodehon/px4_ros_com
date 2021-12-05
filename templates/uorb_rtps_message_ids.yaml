@@ -130,6 +130,7 @@ rtps:
     msg: EstimatorSensorBias
   - id: 65
     msg: SensorCombined
+    send: true
   - id: 66
     msg: SensorCorrection
   - id: 67
@@ -231,6 +232,7 @@ rtps:
     send: true
   - id: 113
     msg: VehicleAcceleration
+    send: true
   - id: 115
     msg: AirspeedValidated
   - id: 116

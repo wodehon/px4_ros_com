@@ -326,7 +326,7 @@ rtps:
   - id: 160
     msg: ReferenceTrajectory
   - id: 161
-    msg: ReferenceAttitudeThrust
+    msg: ReferenceRotationForce
     receive: true
   - id: 162
     msg: ReferenceVirtualRate
@@ -343,8 +343,6 @@ rtps:
     send: true
   - id: 167
     msg: LogTransError
-  - id: 168
-    msg: LogVelEst
   - alias: ActuatorControls
     id: 180
     msg: ActuatorControls0

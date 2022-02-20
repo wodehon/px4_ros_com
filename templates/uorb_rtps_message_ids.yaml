@@ -336,7 +336,7 @@ rtps:
   - id: 164
     msg: ParamTranslation
   - id: 165
-    msg: ParamAttitude
+    msg: ParamRotation
     send: true
   - id: 166
     msg: LogRateError

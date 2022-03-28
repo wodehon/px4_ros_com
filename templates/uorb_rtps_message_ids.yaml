@@ -124,6 +124,7 @@ rtps:
     msg: RateCtrlStatus
   - id: 58
     msg: RcChannels
+    send: true
   - id: 59
     msg: RcParameterMap
   - id: 60
